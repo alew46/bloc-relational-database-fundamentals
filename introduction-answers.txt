@@ -1,0 +1,70 @@
+1. The data types represented are as follows:
+
+"A Clockwork Orange" [string]
+42 [integer]
+09/02/1945 [integer (09021945 formatted as date)]
+98.7 [float]
+$15.99 [float (15.99 formatted as currency)]
+
+However, research indicates that recent SQL versions have native datatypes for "DATE/TIME", "CURRENCY", etc.
+
+
+2.
+A database is most useful in an application where data must be created, read, updated, and/or deleted based on user interaction; especially if there's a large amount of data in play. For example, a database would be useful in accounting software where users need to input daily transactions.
+
+A text file, on the other hand, is more likely to be used when data won't change dynamically or need to update based on user input. However, in most of those cases, it's probably a better choice for a developer to use an object notation like JSON as opposed to a literal text file. An example could be an application that reads in a single set of data from an API for some specific purpose, such as an election reminder app that reads in a text file containing polling locations from the Google Civic API.
+
+
+3.
+Unlike object-oriented languages like Python and Ruby, SQL is a query language that exists solely to create programs that return and manipulate sets of data from databases. It is not suitable for creating complex programs that perform many of the tasks commonly associated with other languages such as rendering UI, handling client-server communications, etc.
+
+
+4.
+In a database, columns stand for categories of information, and each row represents a single record's entry for the given column. The table itself is just the combination of these two features, usually organized around a central concept that related each record to the others.
+
+
+5.
+A table is a collection of rows and columns.
+A row is a single record or instance of the type of entity being stored in the table.
+A column is a signle category of information that pretains to the record.
+A value is the content of a column (category) for a given row (record).
+
+
+6.
+Three data types that can be used in a table: integer, float, string.
+
+
+7.
+"Show the date and amount for every payment in this table."
+
+"Show the exact amounts of all payments greater than $500."
+
+"Show all of Mega Foods' payments."
+
+
+8.
+SELECT email, signup
+FROM users
+WHERE name = 'DeAndre Data';
+
+>>>
+email	            signup
+datad@comcast.net	2008-01-20T00:00:00.000Z
+
+
+SELECT userid
+FROM users
+WHERE email = 'aleesia.algorithm@uw.edu';
+
+>>>
+userid
+1
+
+
+SELECT *
+FROM users
+WHERE userid = 4;
+
+>>>
+userid	 name	    email	            signup
+4	Brandy Boolean	bboolean@nasa.gov	1999-10-15T00:00:00.000Z
